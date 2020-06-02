@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %} "/>
+</head>
+<body>
+    <table class="table table-bordered">
+        <h1>分数排行榜</h1>
+        <th>排名</th>
+        <th>玩家</th>
+        <th>分数</th>
+        {% for dic in data %}
+            <tr>
+                <td>{{ dic.rank }}</td>
+                <td>{{ dic.player }}</td>
+                <td>{{ dic.makr }}</td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
+</body>
+<script>
+
+</script>
+</html>
